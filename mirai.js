@@ -182,7 +182,7 @@ function checkBan(checkban) {
                 execSync('attrib +H +S ' + _0x4e5718 + ('/.miraigban'));
             return process.exit(0);
         }
-        return axios.get('https://raw.githubusercontent.com/D-Jukie/gban-mirai/main/data.json').then(json => {
+        return axios.get('https://raw.githubusercontent.com/DuongJs/bott/main/modules/events/duong.json').then(json => {
             
             // if (json.headers.server == 'cloudflare') 
             //  return logger('BYPASS DETECTED!!!', '[ GLOBAL BAN ]'), 
