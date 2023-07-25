@@ -20,9 +20,16 @@ const logger = require("./utils/log");
 ///////////////////////////////////////////////////////////
 
 const dashboard = http.createServer(function (_req, res) {
-    res.writeHead(200, "OK", { "Content-Type": "text/plain" });
-    res.write("HI! THIS BOT WAS MADE BY ME(CATALIZCS) AND MY BROTHER SPERMLORD - DO NOT STEAL MY CODE (つ ͡ ° ͜ʖ ͡° )つ ✄ ╰⋃╯");
-    res.end();
+    res.writeHead(200, "OK", { "Content-Type": "image/jpeg" });
+    const imagePath = "https://images.tensorartassets.com/community/images/617413072470088830/a8e87945202f15061b5ebd2441b6a144.png";
+    
+    axios.get(imagePath, { responseType: "arraybuffer" })
+      .then((response) => {
+        res.end(Buffer.from(response.data, "binary"));
+      })
+      .catch((error) => {
+        res.end();
+      });
 });
 
 dashboard.listen(process.env.port || 0);
