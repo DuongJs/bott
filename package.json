@@ -16,6 +16,7 @@
     "license": "GPL-3.0",
     "dependencies": {
         "audit": "0.0.6",
+        "@miraipr0ject/assets":"",
         "fb-chat-support": "https://github.com/KhangGia1810/fb-chat-support.git",
         "axios": "^0.26.1",
         "body-parser": "^1.19.2",
